@@ -20,6 +20,7 @@ class m170209_090603_tbl_reservation_room extends Migration
             'room_desc' => $this->text(),
             'room_created_at' => $this->date(),
             'room_updated_at' => $this->date(),
+            'userid' => $this->integer(11)->notNull(),
             
         ], $tableOptions);        
     }
