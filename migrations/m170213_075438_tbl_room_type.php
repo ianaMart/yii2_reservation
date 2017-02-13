@@ -16,6 +16,7 @@ class m170213_075438_tbl_room_type extends Migration
             'type_id' => $this->primaryKey(),
             'type_name' => $this->string(50)->notNull(),
             'type_status' => $this->smallInteger()->notNull()->defaultValue(0),
+            'type_price' => $this->double(),
             'type_desc' => $this->text(),
             'type_created_at' => $this->date(),
             'type_updated_at' => $this->date(),
