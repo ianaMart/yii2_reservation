@@ -27,6 +27,6 @@ class m170209_090603_tbl_room extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%tbl_reservation_room}}');
+        $this->dropTable('{{%tbl_room}}');
     }
 }
