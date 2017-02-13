@@ -2,9 +2,9 @@
 
 use yii\db\Migration;
 
-class m170209_090603_tbl_room extends Migration
+class m170213_075438_tbl_room_type extends Migration
 {
-    public function up()
+   public function up()
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -12,14 +12,13 @@ class m170209_090603_tbl_room extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%tbl_room}}', [
-            'room_id' => $this->primaryKey(),
-            'room_category_id' => $this->integer(11)->notNull(),
-            'room_name' => $this->string(50)->notNull(),
-            'room_status' => $this->smallInteger()->notNull()->defaultValue(0),
-            'room_desc' => $this->text(),
-            'room_created_at' => $this->date(),
-            'room_updated_at' => $this->date(),
+        $this->createTable('{{%tbl_room_type}}', [
+            'type_id' => $this->primaryKey(),
+            'type_name' => $this->string(50)->notNull(),
+            'type_status' => $this->smallInteger()->notNull()->defaultValue(0),
+            'type_desc' => $this->text(),
+            'type_created_at' => $this->date(),
+            'type_updated_at' => $this->date(),
             'userid' => $this->integer(11)->notNull(),
             
         ], $tableOptions);        
