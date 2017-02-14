@@ -15,6 +15,8 @@ class m170213_081448_tbl_reservation extends Migration
         $this->createTable('{{%tbl_reservation}}', [
             'res_id' => $this->primaryKey(),
             'res_status' => $this->smallInteger()->notNull()->defaultValue(0),
+            'res_check_in' => $this->date(),
+            'res_check_out' => $this->date(),
             'res_created_at' => $this->date(),
             'res_updated_at' => $this->date(),
             'member_id' => $this->integer(11)->notNull(),
