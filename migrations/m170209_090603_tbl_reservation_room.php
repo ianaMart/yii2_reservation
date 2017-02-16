@@ -20,6 +20,9 @@ class m170209_090603_tbl_room extends Migration
             'room_desc' => $this->text(),
             'room_created_at' => $this->date(),
             'room_updated_at' => $this->date(),
+            'room_max_capacity' => $this->smallInteger()->notNull()->defaultValue(1),
+            'room_max_adults' => $this->smallInteger()->notNull()->defaultValue(1),
+            'room_max_child' => $this->smallInteger()->notNull()->defaultValue(1),
             'userid' => $this->integer(11)->notNull(),
             
         ], $tableOptions);        
